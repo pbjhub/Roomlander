@@ -1,10 +1,10 @@
 class LandingController < ApplicationController
-  def index
+  def land
   	@curacao = true
   end
 
-  def private
-  	@chupitos = true
+  def search
+  	@chupitos = false
   end
 
 end

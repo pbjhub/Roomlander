@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  description: MyText
+  home: false
+  dep: false
+  garage: false
+  girls: false
+  boys: false
+  animals: false
+  nanimals: false
+  smoke: false
+  nsmoke: false
+  urgent: false
+  quick: false
+  bathroom: false
+  servinc: false
+  location: MyText
+  user_id: 
+
+two:
+  price: 1
+  description: MyText
+  home: false
+  dep: false
+  garage: false
+  girls: false
+  boys: false
+  animals: false
+  nanimals: false
+  smoke: false
+  nsmoke: false
+  urgent: false
+  quick: false
+  bathroom: false
+  servinc: false
+  location: MyText
+  user_id: 

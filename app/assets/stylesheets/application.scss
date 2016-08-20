@@ -2,7 +2,28 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body{
-     background-color: white
+.land{
+  background: url(http://www.dadaroom.com/blog/wp-content/uploads/2015/09/vivir-con-roomies.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+/*#land1{
+	color:white;
+}*/
+
+#nav1{
+	background-color: rgba(100, 100, 100, 0.4);
+	border: 0px;
+}
+
+#jumbo1{
+	background-color: rgba(100, 100, 100, 0.0);
+	color:black;
+}
+
+
+
+/**/
