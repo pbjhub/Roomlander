@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-gem 'carrierwave'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -44,8 +43,19 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
   gem 'devise'
   gem 'bootstrap-sass', '~> 3.3.6'
-  gem 'acts-as-messageable'
-end
+  gem 'mailboxer'
+  gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+  gem 'fog-aws'
+  gem 'geocoder'
+  gem 'gmaps4rails'
+  gem 'underscore-rails'
+  gem 'mini_magick'
+  gem 'bootstrap-will_paginate'
+  gem 'will_paginate'
+  gem 'gravatar_image_tag'
+  gem 'chosen-rails'
 

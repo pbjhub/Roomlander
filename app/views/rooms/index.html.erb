@@ -3,9 +3,24 @@
 
 <p id="notice" ><%= notice %></p>
 
+<h1>Your Rooms</h1>
 
 
-<h1>Listing Rooms</h1>
+<script>
+$(document).ready(function() {
+
+ $("[name='buscador']").on("input", function(){
+ var val = $(this).val();
+ $.ajax({
+ url: '<%= rooms_path %>',
+ type: 'GET',
+ dataType: 'script',
+ data: {filter: val},
+ })
+ });
+});
+
+</script>
 
 <table>
   <thead>
@@ -51,6 +66,9 @@
         <td><%= room.servinc %></td>
         <td><%= room.location %></td>
         <td><%= room.user.name %></td>
+        <td><% room.images.each do |photo| %>
+        <%= image_tag photo.thumb.url %>
+        <% end %></td>
         <td><%= link_to 'Show', room %></td>
         <td><%= link_to 'Edit', edit_room_path(room) %></td>
         <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -62,3 +80,4 @@
 <br>
 
 <%= link_to 'New Room', new_room_path %>
+

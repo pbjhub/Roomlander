@@ -85,5 +85,9 @@
   <%= @room.user.name %>
 </p>
 
+<% @room.images.each do |photo| %>
+<%= image_tag photo.url, :width =>100, :height => 100 %>
+<% end %>
+
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>

@@ -1,4 +1,53 @@
 <%= render "layouts/navbar" %>
 
+<div class= "container">
 
-<h1 class= "container"> Search AF </h1>
+
+<h1> Rooms Available </h1>
+
+<%= render "layouts/map" %>
+
+
+<script>
+$(document).ready(function() {
+
+ $("[name='buscador']").on("input", function(){
+ var val = $(this).val();
+ $.ajax({
+ url: '<%= rooms_path %>',
+ type: 'GET',
+ dataType: 'script',
+ data: {filter: val, landing: 1},
+ })
+ });
+});
+
+</script>
+
+
+
+
+
+<thead>
+    <tr> 
+      <th >Location </th>
+      <th> Price</th>
+      <th colspan="3"></th>
+    </tr>
+</thead>
+
+<table>
+
+  <tbody>
+    <% @rooms.each do |room| %>
+    <%= render room %>
+   <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+</div>
+
+

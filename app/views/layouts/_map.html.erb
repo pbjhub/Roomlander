@@ -1,0 +1,34 @@
+<div style='width: 800px;'>
+ <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<script>
+function initMap(){
+ handler = Gmaps.build('Google');
+ handler.buildMap({ provider: {
+  center: {lat: 25.680111, lng: -100.317131},
+  zoom: 11,
+  minZoom: 4,
+  maxZoom: 18,
+
+
+ }, internal: {id: 'map'}}, function(){
+    
+    markers = handler.addMarkers(<%=raw @markers.to_json %>);
+
+
+ });
+};
+</script>
+
+
+
+
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXiiQDAdCRZbNKhIq-Au_7FKPpqJ8b3PA&callback=initMap" async defer></script>
+<script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>

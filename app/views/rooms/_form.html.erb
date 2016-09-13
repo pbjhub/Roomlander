@@ -11,14 +11,32 @@
     </div>
   <% end %>
 
+  
+    
   <div class="field">
     <%= f.label :price %><br>
     <%= f.number_field :price %>
   </div>
+
+  <div class="field">
+  <%= f.label "Are you in the location you want to offer?" %><br>
+  <button type="button" id ="getloc">Yes</button>
+  <button type="button" id ="getmap">No</button> <br>
+  </div>
+
+  <div id="map" style='width: 0px; height: 0px;'></div>
+
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_area :location %>
+  </div>
+  
+
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+
   <div class="field">
     <%= f.label :home %><br>
     <%= f.check_box :home %>
@@ -71,12 +89,89 @@
     <%= f.label :servinc %><br>
     <%= f.check_box :servinc %>
   </div>
+  
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_area :location %>
+    <%= f.label "Select photos of the room(s)" %><br />
+    <%= f.file_field :images, multiple: true %> <br>
   </div>
+
+  <%= f.hidden_field :latitude %>
+  <%= f.hidden_field :longitude %>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
+
+
 <% end %>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXiiQDAdCRZbNKhIq-Au_7FKPpqJ8b3PA" async defer></script>
+<script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer.js"></script>
+
+<script >
+ var marker;
+
+function initMap(){
+  $("#map").width(800);
+  $("#map").height(400);
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {
+  center: {lat: 25.680111, lng: -100.317131},
+  zoom: 11,
+  minZoom: 4,
+  maxZoom: 18,
+  }, 
+  internal: {id: 'map'}}, function(){
+    map = handler.getMap();
+   google.maps.event.addListener(map, 'click', function(event) {
+   placeMarker(event.latLng);
+   });
+     
+    function placeMarker(location) {
+       if (marker != null) {
+       marker.setMap(null);
+       }
+       var latitude = location.lat();
+       var longitude = location.lng();
+      console.log(latitude);
+      console.log(longitude);
+        $("#room_latitude").val(latitude);
+        $("#room_longitude").val(longitude);
+     
+     marker = new google.maps.Marker({
+        position: location, 
+        map: map,   
+    });
+   }
+  });
+  };
+
+
+
+
+  $('#getloc').on("click", function(){
+    getLocation();
+  });
+
+
+  function getLocation() {
+ if (navigator.geolocation) {
+ navigator.geolocation.getCurrentPosition(showPosition);
+ } else {
+ x.innerHTML = "Geolocation is not supported by this browser.";
+ }
+ }
+ function showPosition(position) {
+ var latitude = position.coords.latitude;
+ var longitude = position.coords.longitude;
+ $("#room_latitude").val(latitude);
+ $("#room_longitude").val(longitude);
+ }
+
+ $('#getmap').on("click", function(){
+    initMap();
+  });
+
+</script>

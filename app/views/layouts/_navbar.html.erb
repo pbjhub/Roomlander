@@ -14,12 +14,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
       
       <form class="navbar-form navbar-left">
-      <% if !@curacao %>
+      <% if !@curacao && !@pot %>
         <div class="form-group" >
-          <input type="text" class="form-control" placeholder="Where do you want to live?">
+          <input type="text" class="form-control" placeholder="Where do you want to live?" name="buscador">
         </div>
-        <button type="submit" class="btn btn-default">Blast off!</button>
       <% end %>
+
+      
       </form>
       
       <ul class="nav navbar-nav navbar-right">
@@ -30,12 +31,19 @@
        <a href="<%= rooms_path %>"> Create a post</a>
        </li>
        <% end %>
+       <% if !@eljefe %>
+       <li>
+       <a href="<%= conversations_path %>"> Inbox </a>
+       </li>
+        <% end %>
        <% if !@curacao %>
        <li>
        <a href="<%= edit_user_registration_path %>"> Account</a>
        </li>
        <% end %>
        <% end %>
+
+      
        
        
 
