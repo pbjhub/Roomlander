@@ -1,6 +1,21 @@
-    <tr id = "<%= room.id %>">
-        <td><%= room.location %></td>
-        <td><%= room.price %></td>
-        <td><%= link_to 'Show', room %></td>
-    </tr>
+
+
+  <div id = "<%= room.id %>" class="col-xs-6 col-md-4 rooms" >
+        
+        <% room.images.each do |photo| %>
+        <%= image_tag photo.url, :width =>'100%', :height => '100%', :position => "relative" %>
+        <% end %> 
+        
+        <p class='uno'><span class="uhu"><%= room.location %></span></p>
+        <p class='dos'><span class="uhu">$<%= room.price %></span></p>
+        <p class='tres'><span class="uhu"><%= link_to 'Lets have a look!', room %></span></p>
+        
+            
+        
+           
+
+
+  </div>
+
+
 

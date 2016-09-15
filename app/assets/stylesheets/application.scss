@@ -13,17 +13,17 @@
 }
 
 /*#land1{
-	color:white;
+  color:white;
 }*/
 
 #nav1{
-	background-color: rgba(100, 100, 100, 0.4);
-	border: 0px;
+  background-color: rgba(100, 100, 100, 0.4);
+  border: 0px;
 }
 
 #jumbo1{
-	background-color: rgba(100, 100, 100, 0.0);
-	color:black;
+  background-color: rgba(100, 100, 100, 0.0);
+  color:black;
 }
 
 .alert-notice {
@@ -34,16 +34,305 @@
   @extend .alert-warning;
 }
 
+.rooms{
+  height: 300px;
+  margin: 0px;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
 
-.messages {
+}
+
+.uhu{
+   
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); 
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+  
+}
+
+
+.uno{
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.dos{
+  position: absolute;
+  top: 90px;
+  left: 40px;
+}
+
+.tres{
+  position: absolute;
+  top: 150px;
+  left: 40px;
+}
+
+.cont{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+}
+
+.mo{
+  position: absolute;
+  top: 80px;
+  left: 80px;
+}
+
+.sho{
+  position: absolute;
+  left: 950px;
+  top: 110px;
+}
+
+.messages{
   max-height: 400px;
   overflow-y: auto;
   margin-bottom: 1em;
   margin-top: 1em;
 }
 
+.imageh{
+  content:url(http://icons.iconarchive.com/icons/fps.hu/free-christmas-flat-circle/512/home-icon.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imageg{
+  content:url(https://freeiconshop.com/files/edd/person-girl-flat.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imaged{
+  content:url(http://www.iconarchive.com/download/i99409/webalys/kameleon.pics/Apartment.ico);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagega{
+  content:url(https://cdn1.iconfinder.com/data/icons/buildings-2/512/garage-512.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagebo{
+  content:url(https://cdn1.iconfinder.com/data/icons/learning-and-entertainment-flat-icons/512/taol.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagea{
+  content:url(http://www.freeiconspng.com/uploads/png-file-png-file-png-file-png-file-png-file-30.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagena{
+  content:url(https://cdn2.iconfinder.com/data/icons/prohibitions/105/16-512.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagens{
+  content:url(https://cdn2.iconfinder.com/data/icons/wayfinding-system-basic-icon-set/512/smoking_area-512.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagenns{
+  content:url(http://www.clipartbest.com/cliparts/pT5/G9a/pT5G9apTB.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imageu{
+  content:url(http://www.freeiconspng.com/uploads/clock-icon--small--flat-iconset--paomedia-5.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imageq{
+  content:url(http://iconpopanswers.com/wp-content/uploads/2013/04/icomania-large-470.jpg);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  border-radius: 100%;
+}
+
+.imageb{
+  content:url(http://www.icons101.com/icon_png/size_256/id_67319/Bathroom.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagew{
+  content:url(http://www.cisl.cam.ac.uk/business-action/natural-resource-security/natural-capital-leaders-platform/doing-business-with-nature/images/water-icon.png/image);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagel{
+  content:url(http://stjames-conroe.org/wp-content/uploads/2014/08/icon-plug.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.imagegas{
+  content:url(https://xoomenergy.com/images/icon-natural-gas-orange.png);
+  height: 100px;
+  width: 100px;
+  display: inline;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+#description{
+  position: absolute;
+  top: 700px;
+  left: 80px;
+  height:200px; 
+  width:700px;
+  background: rgba(100, 100, 100, 0.4);
+  border-radius:5px;
+}
+
+#desctitle{
+  position: absolute;
+  top: 630px;
+  left: 80px;
+}
+
+.name{
+  position:relative;
+  left:30px;
+  top: 160px;
+}
+
+.mb{
+  position: absolute;
+  top: 700px;
+  right: 200px;
+}
+
+.rd{
+  position:relative;
+  height: 170px;
+  width: 500px;
+  left: 180px;
+  top: -20px;
+  background-color:white;
+  border-radius:5px;
+  padding: 10px;
+}
+
+#rde{
+  position: absolute;
+  top: 700px;
+  left: 900px;
+  height:200px; 
+  width:500px;
+  background: rgba(100, 100, 100, 0.4);
+  border-radius:5px;
+}
+
+#descrtitle{
+   position: absolute;
+   top: 630px;
+  left: 900px;
+}
+
+.rdr{
+  position:relative;
+  height: 178px;
+  width: 473px;
+  left: 12px;
+  top: 10px;
+  background-color:white;
+  border-radius:5px;
+  padding: 10px;
+}
 
 
 
-
-/**/

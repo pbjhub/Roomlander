@@ -16,6 +16,9 @@ class LandingController < ApplicationController
     
   end
 
+  def images
+  end
+
   def inbox
     @eljefe = true
   end

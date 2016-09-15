@@ -12,7 +12,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # GET /resource/edit
+   #GET /resource/edit
   def edit
      @curacao = true
      super
@@ -47,7 +47,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
    #If you have extra params to permit, append them to the sanitizer.
    def configure_account_update_params
-     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :age, {photos: []}])
+     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :age, {photos: []}, :description])
    end
 
   # The path used after sign up.

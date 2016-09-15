@@ -50,3 +50,190 @@
 
 
 :width =>100, :height => 100
+
+
+image_tag gravatar_image_url(user.email, size: size), title: title, class: 'img-rounded'
+
+map.setZoom(8);
+          map.setCenter(marker.getPosition());
+
+
+User.find_by(id: params[:to].to_i) if params[:to]
+
+User.all.each do |user|
+    s << "<option value='#{user.id}' data-img-src='#{gravatar_image_url(user.email, size: 50)}' #{'selected' if user == chosen_recipient}>#{user.name}</option>"
+  end
+
+
+  <thead>
+    <tr> 
+      <th><div class = 'rooms'>Location</div> </th>
+      <th> Price</th>
+      <th colspan="3"></th>
+    </tr>
+</thead>
+
+<thead>
+    <tr> 
+      <th><div class = 'rooms'>Div 1</div> </th>
+      <th><div class = 'rooms'>Div 2</div></th>
+      <th><div class = 'rooms'>Div 3</div></th>
+      <th><div class = 'rooms'>Div 4</div></th>
+      <th colspan="3"></th>
+    </tr>
+    <tr> 
+      <th><div class = 'rooms'>Div 1</div> </th>
+      <th><div class = 'rooms'>Div 2</div></th>
+      <th><div class = 'rooms'>Div 3</div></th>
+      <th><div class = 'rooms'>Div 4</div></th>
+      <th colspan="3"></th>
+    </tr>
+    <tr> 
+      <th><div class = 'rooms'>Div 1</div> </th>
+      <th><div class = 'rooms'>Div 2</div></th>
+      <th><div class = 'rooms'>Div 3</div></th>
+      <th><div class = 'rooms'>Div 4</div></th>
+      <th colspan="3"></th>
+    </tr>
+</thead>
+
+markers = handler.addMarkers(<%=raw @markers.to_json %>);
+
+@rooms.each do |r|
+
+    markers = handler.addMarkers([{
+       lat: r.latitude,
+       lng: r.longitude,
+    }]);
+
+    end
+
+
+
+
+<p>
+  <strong>Price:</strong>
+  <%= @room.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @room.description %>
+</p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @room.home %>
+</p>
+
+<p>
+  <strong>Dep:</strong>
+  <%= @room.dep %>
+</p>
+
+<p>
+  <strong>Garage:</strong>
+  <%= @room.garage %>
+</p>
+
+<p>
+  <strong>Girls:</strong>
+  <%= @room.girls %>
+</p>
+
+<p>
+  <strong>Boys:</strong>
+  <%= @room.boys %>
+</p>
+
+<p>
+  <strong>Animals:</strong>
+  <%= @room.animals %>
+</p>
+
+<p>
+  <strong>Nanimals:</strong>
+  <%= @room.nanimals %>
+</p>
+
+<p>
+  <strong>Smoke:</strong>
+  <%= @room.smoke %>
+</p>
+
+<p>
+  <strong>Nsmoke:</strong>
+  <%= @room.nsmoke %>
+</p>
+
+<p>
+  <strong>Urgent:</strong>
+  <%= @room.urgent %>
+</p>
+
+<p>
+  <strong>Quick:</strong>
+  <%= @room.quick %>
+</p>
+
+<p>
+  <strong>Bathroom:</strong>
+  <%= @room.bathroom %>
+</p>
+
+<td><%= room.water %></td>
+<td><%= room.light %></td>
+<td><%= room.gas %></td>
+
+<p>
+  <strong>Location:</strong>
+  <%= @room.location %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @room.user.name %>
+</p>
+
+<% @room.images.each do |photo| %>
+<%= image_tag photo.url, :width =>100, :height => 100 %>
+<% end %>
+
+<p><%= link_to 'Start conversation', new_message_path(:room_id => params[:id]), class: 'btn btn-lg btn-primary' %></p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
+
+<h2> Roomie description <h2>
+<%= @room.user.name %>
+
+
+
+
+
+
+div.imageh{
+   content:url(http://icons.iconarchive.com/icons/fps.hu/free-christmas-flat-circle/512/home-icon.png);
+   height: 100px;
+   width: 100px;
+   display: inline;
+   position: relative;
+   margin: 10px;
+}​
+
+
+
+.imageg{
+   content:url(https://freeiconshop.com/files/edd/person-girl-flat.png);
+   height: 100px;
+   width: 100px;
+   display: inline;
+   position: relative;
+   margin: 10px;
+}​
+
+#<Room id: 16, price: 5600, description: "Nice view", home: false, dep: true, garage: false, girls: true, boys: false, animals: false, nanimals: false, smoke: false, nsmoke: false, urgent: false, quick: false, bathroom: true, servinc: false, location: "Santa Catarina"
+
+<% @room.images.each do |photo| %>
+      <%= image_tag photo.url, :width =>800, :height => 500  %>
+      <% end %>

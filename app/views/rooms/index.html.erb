@@ -39,8 +39,10 @@ $(document).ready(function() {
       <th>Urgent</th>
       <th>Quick</th>
       <th>Bathroom</th>
-      <th>Servinc</th>
       <th>Location</th>
+      <th>Water</th>
+      <th>Light</th>
+      <th>Gas</th>
       <th>User</th>
       <th colspan="3"></th>
     </tr>
@@ -63,8 +65,10 @@ $(document).ready(function() {
         <td><%= room.urgent %></td>
         <td><%= room.quick %></td>
         <td><%= room.bathroom %></td>
-        <td><%= room.servinc %></td>
         <td><%= room.location %></td>
+        <td><%= room.water %></td>
+        <td><%= room.light %></td>
+        <td><%= room.gas %></td>
         <td><%= room.user.name %></td>
         <td><% room.images.each do |photo| %>
         <%= image_tag photo.thumb.url %>

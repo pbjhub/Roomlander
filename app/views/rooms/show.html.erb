@@ -1,93 +1,118 @@
+<%= render "layouts/navbar" %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @room.price %>
-</p>
+<div class="mo">
+<h1>Room - $<%= @room.price %> </h1>
+<h2><%= @room.location %> </h2>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @room.description %>
-</p>
 
-<p>
-  <strong>Home:</strong>
-  <%= @room.home %>
-</p>
 
-<p>
-  <strong>Dep:</strong>
-  <%= @room.dep %>
-</p>
 
-<p>
-  <strong>Garage:</strong>
-  <%= @room.garage %>
-</p>
 
-<p>
-  <strong>Girls:</strong>
-  <%= @room.girls %>
-</p>
 
-<p>
-  <strong>Boys:</strong>
-  <%= @room.boys %>
-</p>
+<div class="icons" style="height:330px; width:545px;color:red;background: rgba(100, 100, 100, 0.4); position:absolute; left: 200px; top: 250px; border-radius:5px">
 
-<p>
-  <strong>Animals:</strong>
-  <%= @room.animals %>
-</p>
+   <% if @room.girls %>
+   <div class="imageg">
+    </div>
+   <%end%> 
 
-<p>
-  <strong>Nanimals:</strong>
-  <%= @room.nanimals %>
-</p>
+   <% if @room.home %>
+   <div class="imageh">
+   </div>
+   <%end%>
 
-<p>
-  <strong>Smoke:</strong>
-  <%= @room.smoke %>
-</p>
+   <% if @room.dep %>
+    <div class="imaged">
+    </div>
+   <%end%>
 
-<p>
-  <strong>Nsmoke:</strong>
-  <%= @room.nsmoke %>
-</p>
+   <% if @room.garage %>
+   <div class="imagega">
+    </div>
+   <%end%>
 
-<p>
-  <strong>Urgent:</strong>
-  <%= @room.urgent %>
-</p>
+   <% if @room.boys %>
+   <div class="imagebo">
+    </div>
+   <%end%>
 
-<p>
-  <strong>Quick:</strong>
-  <%= @room.quick %>
-</p>
+   <% if @room.animals %>
+   <div class="imagea">
+    </div>
+   <%end%>
 
-<p>
-  <strong>Bathroom:</strong>
-  <%= @room.bathroom %>
-</p>
+   <% if @room.nanimals %>
+   <div class="imagena">
+    </div>
+   <%end%>
 
-<p>
-  <strong>Servinc:</strong>
-  <%= @room.servinc %>
-</p>
+   <% if @room.smoke %>
+   <div class="imagens">
+    </div>
+   <%end%>
 
-<p>
-  <strong>Location:</strong>
-  <%= @room.location %>
-</p>
+   <% if @room.nsmoke %>
+   <div class="imagenns">
+    </div>
+   <%end%>
 
-<p>
-  <strong>User:</strong>
-  <%= @room.user.name %>
-</p>
+   <% if @room.urgent %>
+   <div class="imageu">
+    </div>
+   <%end%>
 
-<% @room.images.each do |photo| %>
-<%= image_tag photo.url, :width =>100, :height => 100 %>
-<% end %>
+   <% if @room.quick %>
+    <div class="imageq">
+    </div>
+   <%end%>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+   <% if @room.bathroom %>
+   <div class="imageb">
+    </div>
+   <%end%>
+
+   <% if @room.water %>
+    <div class="imagew">
+    </div>
+   <%end%>
+
+   <% if @room.light %>
+    <div class="imagel">
+    </div>
+   <%end%>
+
+   <% if @room.gas %>
+    <div class="imagegas">
+    </div>
+   <%end%>
+</div>
+
+
+
+
+<div class="sho">
+      <% @room.images.each do |photo| %>
+      <%= image_tag photo.url, :width =>800, :height => 500  %>
+      <% end %>
+</div>
+
+<h2 id="desctitle"> Roomie description <h2>
+
+<div id="description">
+<div class="name"><%= @room.user.name %>, <%= @room.user.age %></div>
+<div class="rd"><%= @room.user.description %></div>
+</div>
+
+
+<h2 id="descrtitle"> Room description <h2>
+
+<div id="rde">
+<div class="rdr"><%= @room.description %></div>
+</div>
+
+<div class="mb">
+<h2><%= link_to 'Start conversation', new_message_path(:room_id => params[:id]), class: 'btn btn-lg btn-primary' %></h2>
+</div>
